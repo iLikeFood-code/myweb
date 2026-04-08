@@ -1,0 +1,279 @@
+<!-- 宣告網頁文件是HTML5格式 -->
+<!doctype html>
+<!-- 網頁所屬地區的語言 -->
+<html lang="zh-Hant-TW">
+    <!-- 檔頭、SEO/GEO/AEO   -->
+  <head>
+    <!-- 文字編碼 -->
+    <meta charset="utf-8">
+    <!-- RWD響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 這些雙引號裡面寫的value值不要隨便給文字以外的東西，像是空格或是-dash或是.點點，這些都會影響SEO -->
+    <!-- 網站作者(擁有者)、品牌名稱 -->
+    <meta name="author" content="一席食地">
+    <!-- 網頁描述，網頁內容濃縮，可透過ChatGPT協助生成 -->
+    <meta name="description" content="一席指南提供一個人用餐的實用建議，包含10大注意事項、座位選擇、餐廳類型與用餐氛圍，幫助你找到適合自己的單人用餐方式，讓一個人吃飯更自在。">
+    <!-- 網頁編輯器 -->
+    <meta name="generation" content="Visual Studio Code">
+    <!-- 網頁關鍵字，網頁內容提取，可透過ChatGPT協助提取 -->
+    <meta name="keywords" content="一席食地,一席指南,一個人吃飯,單人用餐,單人用餐建議,單人餐廳選擇,吧台座位,餐廳氛圍,一人燒肉,一人火鍋,單人咖啡廳">
+    <!-- favicon品牌深色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <!-- favicon品牌淺色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- 網頁標題，包含網站名稱和網頁名稱 -->
+    <title>一席食地-一席指南</title>
+    <!-- Bootstrap雲端CSS外部檔 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- 自訂的CSS，放在bootstrap下面，這樣有衝突的話才會以我們的為主 -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- GoogleIconFonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- GA追蹤碼，放在head上面是google現在演算法的規定 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF2LZWTT1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GF2LZWTT1G');
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- 頁首 -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">一席食地</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導覽列">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">關於一席</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="guide.html">一席指南</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="restaurant.html">一席餐廳</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="review.html">一席食記</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://toolkit.url.com.tw/bbs/index.php?email=bbs@trial-162230.url.tw" target="_blank">一席交流</a>
+              </li>
+            </ul>
+            <!-- 搜尋按鈕 -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-search" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 主內容 -->
+    <main>
+      <!-- 輪播圖外層 -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- 指示器 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- 輪播圖片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/index/solo-dining.webp" class="d-block w-100" alt="單人友善餐廳網站一席食地" title="單人友善餐廳網站一席食地" aria-label="單人友善餐廳網站一席食地">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/discover-solo-dining-restaurants.webp" class="d-block w-100" alt="探索單人友善餐廳" title="探索單人友善餐廳" aria-label="探索單人友善餐廳">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/restaurants-review.webp" class="d-block w-100" alt="單人用餐餐廳踩點紀錄" title="單人用餐餐廳踩點紀錄" aria-label="單人用餐餐廳踩點紀錄">
+          </div>
+        </div>
+        <!-- 控制器 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- 主標語 -->
+      <section class="intro-section">
+        <div class="container text-center">
+          <h1>一席指南</h1>
+          <p class="intro-text">
+            一個人吃飯，並不只是填飽肚子。<br>
+            從座位選擇、餐廳類型到用餐節奏，找到適合自己的方式，吃飯也能變成一段舒服的時間。
+          </p>
+        </div>
+      </section>
+
+      <!-- 以下是網頁主內容 -->
+      <section class="section-block">
+        <div class="container">
+          <div class="brand-banner">
+            <img src="images/guide/caution-list.webp" class="img-fluid w-100 split-image" alt="單人用餐環境與座位設計" title="單人用餐環境與座位設計" aria-label="單人用餐環境與座位設計">
+            <div class="mt-4">
+              <div class="section-heading text-center">
+                <h2>10大用餐注意事項</h2>
+                <p>有時候不需要做很多準備，只要先抓到幾個小原則，一個人用餐就會自在很多。</p>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-12 col-md-6">
+                  <h4>1. 優先選擇吧台座位</h4>
+                  <p>許多餐廳的吧台座位原本就是為單人顧客設計，不但不會佔用多人桌，也能讓用餐變得更加自在。</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>2. 避開尖峰用餐時間</h4>
+                  <p>中午與晚餐尖峰時段通常較擁擠，稍微錯開時間，能讓整體用餐體驗更輕鬆。</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <h4>3. 選擇單人友善餐廳</h4>
+                  <p>像是一人燒肉、一人火鍋或拉麵店，通常都有明確的單人座位配置。</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>4. 咖啡廳是很好的選擇</h4>
+                  <p>咖啡廳通常有靠窗或小桌座位，適合閱讀、工作或單純放鬆。</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <h4>5. 不需要在意他人的目光</h4>
+                  <p>大部分的人都專注在自己的事情上，其實很少有人在注意別人是不是一個人吃飯。</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>6. 可以帶一本書或筆電</h4>
+                  <p>讓用餐時間不只是吃飯，也可以是一段整理自己或放鬆的時間。</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <h4>7. 選擇桌距較寬的餐廳</h4>
+                  <p>空間較寬鬆的餐廳，會讓單人用餐更加舒適不壓迫。</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>8. 嘗試不同類型的餐廳</h4>
+                  <p>除了燒肉與火鍋，義大利麵、丼飯或簡餐店也都很適合一個人用餐。</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <h4>9. 慢慢享受用餐時間</h4>
+                  <p>一個人吃飯，其實是可以放慢節奏、專心感受食物的時刻。</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>10. 把一個人用餐變成習慣</h4>
+                  <p>當習慣之後，你會發現一個人吃飯其實是一種很自在的選擇。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block section-tight">
+        <div class="container">
+          <div class="section-heading text-center">
+            <h2>如何挑選適合的餐廳？</h2>
+            <p>比起找一間熱門餐廳，<br class="mobile-break">更重要的是找到一間在當下適合你的地方。</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="brand-banner h-100">
+                <img src="images/guide/seat-choice.webp" class="img-fluid w-100 split-image" alt="餐廳吧台與單人座位" title="餐廳吧台與單人座位" aria-label="餐廳吧台與單人座位">
+                <div class="mt-4">
+                  <h2>座位選擇</h2>
+                  <p>選對座位，會直接影響一個人用餐的舒適程度。</p>
+                  <ul class="guide-list">
+                    <li>✔ 吧台座位：適合快速用餐、不怕尷尬</li>
+                    <li>✔ 靠窗座位：適合放鬆、發呆</li>
+                    <li>✔ 角落位置：降低被打擾的感覺</li>
+                  </ul>
+                  <p class="text-end mb-0"><a href="restaurant.html" target="_self" class="btn btn-brown">找尋適合自己的餐廳</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="brand-banner h-100">
+                <img src="images/guide/dining-atmosphere.webp" class="img-fluid w-100 split-image" alt="安靜舒適的用餐環境" title="安靜舒適的用餐環境" aria-label="安靜舒適的用餐環境">
+                <div class="mt-4">
+                  <h2>用餐氛圍</h2>
+                  <p>不同餐廳的節奏差很多，選對氛圍會讓體驗更自在。</p>
+                  <ul class="guide-list">
+                    <li>✔ 安靜環境：適合放鬆或獨處</li>
+                    <li>✔ 音樂偏大：適合快速吃完離開</li>
+                    <li>✔ 桌距寬：不容易有壓迫感</li>
+                  </ul>
+                  <p class="text-end mb-0"><a href="review.html" target="_self" class="btn btn-brown">查看餐廳評價</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="brand-banner h-100">
+                <img src="images/guide/restaurant-type.webp" class="img-fluid w-100 split-image" alt="一人燒肉與火鍋和咖啡廳座位" title="一人燒肉與火鍋和咖啡廳座位" aria-label="一人燒肉與火鍋和咖啡廳座位">
+                <div class="mt-4">
+                  <h2>餐廳類型</h2>
+                  <p>有些餐廳天生就比較適合一個人用餐。</p>
+                  <ul class="guide-list">
+                    <li>✔ 一人燒肉：獨立烤爐設計</li>
+                    <li>✔ 一人火鍋：個人鍋不尷尬</li>
+                    <li>✔ 咖啡廳：適合久坐與放鬆</li>
+                  </ul>
+                  <p class="text-end mb-0"><a href="restaurant.html" target="_self" class="btn btn-brown">查看餐廳分類</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="brand-banner h-100">
+                <img src="images/guide/dining-time.webp" class="img-fluid w-100 split-image" alt="一人用餐放鬆時光" title="一人用餐放鬆時光" aria-label="一人用餐放鬆時光">
+                <div class="mt-4">
+                  <h2>用餐節奏</h2>
+                  <p>一個人吃飯，其實可以自己決定節奏。</p>
+                  <ul class="guide-list">
+                    <li>✔ 想快：選擇翻桌率高的店</li>
+                    <li>✔ 想慢：選擇不限時空間</li>
+                    <li>✔ 想放空：咖啡廳最適合</li>
+                  </ul>
+                  <p class="text-end mb-0"><a href="https://toolkit.url.com.tw/bbs/index.php?email=bbs@trial-162230.url.tw" target="_blank" class="btn btn-brown">看看大家怎麼吃</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 頁尾 -->
+      <footer class="site-footer">
+        <div class="container footer-flex">
+          <p>一席食地 &copy; 2026</p>
+          <a href="#top" class="btn btn-outline-brown btn-sm">回到頁面頂端</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap雲端JS外部檔 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

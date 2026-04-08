@@ -1,0 +1,442 @@
+<!-- 宣告網頁文件是HTML5格式 -->
+<!doctype html>
+<!-- 網頁所屬地區的語言 -->
+<html lang="zh-Hant-TW">
+    <!-- 檔頭、SEO/GEO/AEO   -->
+  <head>
+    <!-- 文字編碼 -->
+    <meta charset="utf-8">
+    <!-- RWD響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 這些雙引號裡面寫的value值不要隨便給文字以外的東西，像是空格或是-dash或是.點點，這些都會影響SEO -->
+    <!-- 網站作者(擁有者)、品牌名稱 -->
+    <meta name="author" content="一席食地">
+    <!-- 網頁描述，網頁內容濃縮，可透過ChatGPT協助生成 -->
+    <meta name="description" content="一席食地的一席食記，收錄一人燒肉、一人火鍋與單人咖啡廳的實際用餐心得，從空間感、自在度到整體氛圍，整理出適合一個人用餐的真實經驗。">
+    <!-- 網頁編輯器 -->
+    <meta name="generation" content="Visual Studio Code">
+    <!-- 網頁關鍵字，網頁內容提取，可透過ChatGPT協助提取 -->
+    <meta name="keywords" content="一席食地,一席食記,單人用餐食記,一人燒肉,一人火鍋,單人咖啡廳,餐廳心得,單人友善餐廳">
+    <!-- favicon品牌深色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <!-- favicon品牌淺色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- 網頁標題，包含網站名稱和網頁名稱 -->
+    <title>一席食地-一席食記</title>
+    <!-- Bootstrap雲端CSS外部檔 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- 自訂的CSS，放在bootstrap下面，這樣有衝突的話才會以我們的為主 -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- GoogleIconFonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- GA追蹤碼，放在head上面是google現在演算法的規定 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF2LZWTT1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GF2LZWTT1G');
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- 頁首 -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">一席食地</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導覽列">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">關於一席</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="guide.html">一席指南</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="restaurant.html">一席餐廳</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="review.html">一席食記</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://toolkit.url.com.tw/bbs/index.php?email=bbs@trial-162230.url.tw" target="_blank" rel="noopener noreferrer">一席交流</a>
+              </li>
+            </ul>
+            <!-- 搜尋按鈕 -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-search" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 主內容 -->
+    <main>
+      <!-- 輪播圖外層 -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- 指示器 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- 輪播圖片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/index/solo-dining.webp" class="d-block w-100" alt="單人友善餐廳網站一席食地" title="單人友善餐廳網站一席食地" aria-label="單人友善餐廳網站一席食地">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/discover-solo-dining-restaurants.webp" class="d-block w-100" alt="探索單人友善餐廳" title="探索單人友善餐廳" aria-label="探索單人友善餐廳">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/restaurants-review.webp" class="d-block w-100" alt="單人用餐餐廳踩點紀錄" title="單人用餐餐廳踩點紀錄" aria-label="單人用餐餐廳踩點紀錄">
+          </div>
+        </div>
+
+        <!-- 控制器 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- 主標語 -->
+      <section class="intro-section">
+        <div class="container text-center">
+          <h1>一席食記</h1>
+          <p class="intro-text">
+            從一個人的燒肉、火鍋到咖啡廳，<br class="mobile-break">記下那些適合獨自用餐的真實經驗。<br>
+            不只是吃了什麼，<br class="mobile-break">也包括空間感、自在度與當下的節奏。
+          </p>
+
+          <!-- 類型按鈕 -->
+          <div class="review-filter-wrap">
+            <div class="review-filter-top">
+              <a href="#all-reviews" class="btn btn-brown">全部食記</a>
+            </div>
+            <div class="review-filter-bottom">
+              <a href="#yakiniku-section" class="btn btn-outline-brown">一人燒肉</a>
+              <a href="#hotpot-section" class="btn btn-outline-brown">一人火鍋</a>
+              <a href="#coffee-section" class="btn btn-outline-brown">咖啡廳</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 主內容 ===== -->
+      <section id="all-reviews" class="section-block section-tight">
+        <div class="container">
+
+          <!-- 🔥 燒肉 -->
+          <div id="yakiniku-section" class="section-heading text-center">
+            <h2>🔥 一個人，<br class="mobile-break">也能自在享受燒肉時光</h2>
+            <p>有些燒肉店天生就適合獨自前往，坐下來之後，反而更能專心感受自己的節奏。</p>
+          </div>
+
+          <!-- 雲霧翩翩 -->
+          <article class="brand-banner mb-5 pb-4 border-bottom">
+            <div class="row g-4 align-items-start">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/meat1.webp" class="img-fluid w-100 split-image" alt="雲霧翩翩燒肉店內部空間與單人烤爐" title="雲霧翩翩燒肉店內部空間與單人烤爐" aria-label="雲霧翩翩燒肉店內部空間與單人烤爐">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>雲霧翩翩</h3> 
+                <p class="text-muted">台北｜燒肉</p>
+
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★☆☆☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌙 推薦時段</span>
+                    <span class="meta-stars">平日晚餐</span>
+                  </div>
+                </div>
+
+                <p>雲霧翩翩主打一個人也能吃燒肉，座位規劃得很明確，每個人都有自己的位置和烤爐。桌面不算大，但該有的配置都很完整，烤爐、夾子、餐具都收在自己的範圍裡，不需要和旁邊的人共用。</p>
+                <p>坐下來之後，會很明顯感覺到那種屬於一個人的空間感。就算店裡還有其他客人，也不太會互相干擾。肉的表現偏日常穩定，不是走特別精緻或高價的路線，但整體吃起來是舒服的。</p>
+                <p class="mb-0">如果只是單純想吃燒肉，又不想特地約人，這裡會是很剛好的一種選擇。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 松笠屋 -->
+          <article class="brand-banner mb-5 pb-4 border-bottom">
+            <div class="row g-4 align-items-start flex-lg-row-reverse">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/meat2.webp" class="img-fluid w-100 split-image" alt="松笠屋燒肉店內單人烤爐與座位區" title="松笠屋燒肉店內單人烤爐與座位區" aria-label="松笠屋燒肉店內單人烤爐與座位區">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>松笠屋</h3>
+                <p class="text-muted">台南｜燒肉</p>
+
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★☆☆☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌙 推薦時段</span>
+                    <span class="meta-stars">晚餐時段</span>
+                  </div>
+                </div>
+
+                <p>松笠屋的座位是單人分隔設計，每個位置都有自己的烤爐和桌面，範圍劃分得很清楚。除了基本設備之外，桌上還會配一個小螢幕，邊吃邊看點東西，其實不會突兀。</p>
+                <p>坐下來之後，那種屬於自己的區域感很明確，不太會被周圍打斷。份量對一個人來說也剛好，不需要特別多點，也能把一餐吃得完整。</p>
+                <p class="mb-0">整體節奏偏安靜，更適合專心吃完一頓燒肉的時候。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 🍲 火鍋 -->
+          <div id="hotpot-section" class="section-heading text-center pt-3">
+            <h2>🍲 一個人，<br class="mobile-break">也可以享受熱騰騰火鍋</h2>
+            <p>火鍋不一定要熱鬧才成立，有時候一個人慢慢煮、慢慢吃，反而更自在。</p>
+          </div>
+
+          <!-- Extension -->
+          <article class="brand-banner mb-5 pb-4 border-bottom">
+            <div class="row g-4 align-items-start">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/hotpot1.webp" class="img-fluid w-100 split-image" alt="Extension 1 by 橘色火鍋店內景與吧檯座位" title="Extension 1 by 橘色火鍋店內與吧檯座位" aria-label="Extension 1 by 橘色火鍋店內景與吧檯座位">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>Extension 1 by 橘色</h3>
+                <p class="text-muted">台北｜火鍋</p>
+
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★★☆☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$$$$$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌙 推薦時段</span>
+                    <span class="meta-stars">晚上</span>
+                  </div>
+                </div>
+
+                <p>Extension 1 by 橘色把原本偏多人用餐的火鍋形式，整理成一個人也能成立的節奏。</p>
+                <p>空間走的是偏精緻的路線，但座位之間的距離其實就是一般水準，不特別寬敞，也不至於壓迫。服務還是維持橘色一貫的細緻，一個人坐在這裡，不太會有被特別注意的感覺，整體算是自然的。</p>
+                <p class="mb-0">食材表現不用多說，肉品和湯頭都有一定的高水準。同時，價位也明顯偏高。但如果只是想好好吃一頓火鍋，又不想配合別人的時間，整體來說還是值得一試的好選擇。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 詹記 -->
+          <article class="brand-banner mb-5 pb-4 border-bottom">
+            <div class="row g-4 align-items-start flex-lg-row-reverse">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/hotpot2.webp" class="img-fluid w-100 split-image" alt="詹記算算屋麻辣火鍋店內復古空間和吧檯座位" title="詹記算算屋麻辣火鍋店內復古空間和吧檯座位" aria-label="詹記算算屋麻辣火鍋店內復古空間和吧檯座位">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>詹記算算屋</h3>
+                <p class="text-muted">台北｜火鍋</p>
+
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$$$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌙 推薦時段</span>
+                    <span class="meta-stars">離峰時段</span>
+                  </div>
+                </div>
+
+                <p>詹記本來就很有名，多數時候還是會被當成需要揪人一起吃的那種店。</p>
+                <p>但實際坐進來之後，一個人吃也沒有想像中那麼突兀。復古的空間配上偏暗的燈光，整體不算吵，反而有一點意外的安靜。</p>
+                <p class="mb-0">少了分食的熱鬧，但整鍋的節奏就完全回到自己身上。想吃什麼、什麼時候下鍋，都不用再多想。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ☕ 咖啡 -->
+          <div id="coffee-section" class="section-heading text-center pt-3">
+            <h2>☕ 一個人，<br class="mobile-break">也值得一段安靜的時間</h2>
+            <p>咖啡廳的重點不只是咖啡<br>更多時候，是它能不能讓你安靜地待上一陣子。</p>
+          </div>
+
+          <!-- 補時 -->
+          <article class="brand-banner mb-5 pb-4 border-bottom">
+            <div class="row g-4 align-items-start">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/coffee1.webp" class="img-fluid w-100 split-image" alt="補時咖啡廳內部空間與單人座位" title="補時咖啡廳內部空間與單人座位" aria-label="補時咖啡廳內部空間與單人座位">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>Stoppage Time 補時</h3>
+                <p class="text-muted">台北｜咖啡廳</p>
+
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★☆☆☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★★★</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌤 推薦時段</span>
+                    <span class="meta-stars">下午</span>
+                  </div>
+                </div>
+
+                <p>補時給人的第一個感覺，是它的節奏很慢。</p>
+                <p>坐下來之後，會看到不少人帶著電腦，也有人只是安靜地待著。座位之間的距離抓得剛好，不會覺得擁擠，整體空間是舒服的。</p>
+                <p class="mb-0">就算只是點杯咖啡坐著，也不會感到特別奇怪，時間會照自己的步調慢慢流逝。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sky Cofi -->
+          <article class="brand-banner mb-5">
+            <div class="row g-4 align-items-start flex-lg-row-reverse">
+              <div class="col-12 col-lg-5">
+                <img src="images/review/coffee2.webp" class="img-fluid w-100 split-image" alt="Sky Cofi高樓景觀咖啡廳空間" title="Sky Cofi高樓景觀咖啡廳空間" aria-label="Sky Cofi高樓景觀咖啡廳空間">
+              </div>
+              <div class="col-12 col-lg-7">
+                <h3>Sky Cofi</h3>
+                <p class="text-muted">台北｜咖啡廳</p>
+                <div class="review-meta mb-3">
+                  <div class="review-meta-item">
+                    <span class="meta-label">🪑 自在度</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">👀 被關注</span>
+                    <span class="meta-stars">★★☆☆☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">⏰ 適合久坐</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🙋 單人友善</span>
+                    <span class="meta-stars">★★★★☆</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">💰 價格感受</span>
+                    <span class="meta-stars">$$</span>
+                  </div>
+                  <div class="review-meta-item">
+                    <span class="meta-label">🌃 推薦時段</span>
+                    <span class="meta-stars">傍晚到晚上</span>
+                  </div>
+                </div>
+                <p>Sky Cofi最大特色就是視野，位於商辦大樓的16樓。坐下來之後，窗外整片城市會一起進到視線裡。</p>
+                <p>白天和晚上差很多，我自己比較偏向傍晚到晚上的時間，天色慢慢暗下來，燈一盞一盞亮起來的那段，待在裡面會更有感覺。</p>
+                <p class="mb-0">咖啡表現中上，重點還是在環境。多半就是坐著，看著風景療癒。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 頁尾 -->
+      <footer class="site-footer">
+        <div class="container footer-flex">
+          <p>一席食地 &copy; 2026</p>
+          <a href="#top" class="btn btn-outline-brown btn-sm">回到頁面頂端</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap雲端JS外部檔 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

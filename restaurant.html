@@ -1,0 +1,282 @@
+<!-- 宣告網頁文件是HTML5格式 -->
+<!doctype html>
+<!-- 網頁所屬地區的語言 -->
+<html lang="zh-Hant-TW">
+    <!-- 檔頭、SEO/GEO/AEO   -->
+  <head>
+    <!-- 文字編碼 -->
+    <meta charset="utf-8">
+    <!-- RWD響應式網站 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 這些雙引號裡面寫的value值不要隨便給文字以外的東西，像是空格或是-dash或是.點點，這些都會影響SEO -->
+    <!-- 網站作者(擁有者)、品牌名稱 -->
+    <meta name="author" content="一席食地">
+    <!-- 網頁描述，網頁內容濃縮，可透過ChatGPT協助生成 -->
+    <meta name="description" content="一席指南提供一個人用餐的實用建議，包含10大注意事項、座位選擇、餐廳類型與用餐氛圍，幫助你找到適合自己的單人用餐方式，讓一個人吃飯更自在。">
+    <!-- 網頁編輯器 -->
+    <meta name="generation" content="Visual Studio Code">
+    <!-- 網頁關鍵字，網頁內容提取，可透過ChatGPT協助提取 -->
+    <meta name="keywords" content="一席食地,一席指南,一個人吃飯,單人用餐,單人用餐建議,單人餐廳選擇,吧台座位,餐廳氛圍,一人燒肉,一人火鍋,單人咖啡廳">
+    <!-- favicon品牌深色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon1.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <!-- favicon品牌淺色Logo，第一行針對IE和其他瀏覽器，第二行針對IE之外的瀏覽器 -->
+    <link rel="shortcut icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon2.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- 網頁標題，包含網站名稱和網頁名稱 -->
+    <title>一席食地-一席餐廳</title>
+    <!-- Bootstrap雲端CSS外部檔 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- 自訂的CSS，放在bootstrap下面，這樣有衝突的話才會以我們的為主 -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- GoogleIconFonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- GA追蹤碼，放在head上面是google現在演算法的規定 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF2LZWTT1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GF2LZWTT1G');
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- 頁首 -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">一席食地</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="切換導覽列">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">關於一席</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="guide.html">一席指南</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="restaurant.html">一席餐廳</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="review.html">一席食記</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://toolkit.url.com.tw/bbs/index.php?email=bbs@trial-162230.url.tw" target="_blank">一席交流</a>
+              </li>
+            </ul>
+            <!-- 搜尋按鈕 -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-search" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 主內容 -->
+    <main>
+      <!-- 輪播圖外層 -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- 指示器 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- 輪播圖片 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/index/solo-dining.webp" class="d-block w-100" alt="單人友善餐廳網站一席食地" title="單人友善餐廳網站一席食地" aria-label="單人友善餐廳網站一席食地">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/discover-solo-dining-restaurants.webp" class="d-block w-100" alt="探索單人友善餐廳" title="探索單人友善餐廳" aria-label="探索單人友善餐廳">
+          </div>
+          <div class="carousel-item">
+            <img src="images/index/restaurants-review.webp" class="d-block w-100" alt="單人用餐餐廳踩點紀錄" title="單人用餐餐廳踩點紀錄" aria-label="單人用餐餐廳踩點紀錄">
+          </div>
+        </div>
+        <!-- 控制器 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<!-- 主標 -->
+<section class="intro-section">
+  <div class="container text-center">
+    <h1>一席餐廳</h1>
+    <p class="intro-text">探索適合一個人用餐的餐廳</p>
+  </div>
+</section>
+
+<!-- 篩選區 -->
+<section class="section-block section-tight">
+  <div class="container">
+    <div class="brand-banner">
+
+      <div class="row g-3 align-items-center">
+
+        <div class="col-md-4">
+          <input type="text" id="keywordInput" class="form-control" placeholder="搜尋餐廳名稱">
+        </div>
+
+        <div class="col-md-3">
+          <select id="typeSelect" class="form-select">
+            <option value="">餐廳類型</option>
+            <option value="燒肉">燒肉</option>
+            <option value="火鍋">火鍋</option>
+            <option value="咖啡廳">咖啡廳</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <select id="areaSelect" class="form-select">
+            <option value="">餐廳地區</option>
+            <option value="台北">台北</option>
+            <option value="新北">新北</option>
+            <option value="桃園">桃園</option>
+            <option value="台中">台中</option>
+            <option value="台南">台南</option>
+            <option value="高雄">高雄</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <button class="btn btn-brown w-100" onclick="searchRestaurant()">搜尋</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 餐廳列表 -->
+<section class="section-block">
+  <div class="container">
+
+    <p id="resultCount" class="mb-4">共找到 0 間餐廳</p>
+
+    <div id="restaurantList" class="row g-4"></div>
+
+  </div>
+</section>
+
+<!-- 頁尾 -->
+<footer class="site-footer">
+  <div class="container footer-flex">
+    <p>一席食地 &copy; 2026</p>
+    <a href="#top" class="btn btn-outline-brown btn-sm">回到頁面頂端</a>
+  </div>
+</footer>
+
+</main>
+
+<script>
+let restaurantData = [];
+
+fetch("data.json")
+  .then(res => res.json())
+  .then(data => {
+    restaurantData = data;
+    renderRestaurants(data);
+  });
+
+function searchRestaurant() {
+  const keyword = document.getElementById("keywordInput").value.trim();
+  const type = document.getElementById("typeSelect").value;
+  const area = document.getElementById("areaSelect").value;
+
+  const filtered = restaurantData.filter(item =>
+    item.name.includes(keyword) &&
+    (type === "" || item.type === type) &&
+    (area === "" || item.area === area)
+  );
+
+  renderRestaurants(filtered);
+}
+
+function renderRestaurants(data) {
+  let html = "";
+
+  if (data.length === 0) {
+    html = `
+      <div class="col-12">
+        <div class="brand-banner">
+          <p class="mb-0 text-start">找不到符合條件的餐廳。</p>
+        </div>
+      </div>
+    `;
+  } else {
+    data.forEach(item => {
+      html += `
+        <div class="col-md-6">
+          <div class="featured-card h-100">
+            <div class="featured-card-body d-flex flex-column" style="text-align:left; padding: 2rem;">
+
+              <!-- 第一排：左圖 / 右標題 -->
+              <div class="row g-4 align-items-start mb-4">
+                <div class="col-12 col-sm-4">
+                  <img
+                    src="${item.image}"
+                    class="img-fluid w-100"
+                    style="height: 160px; object-fit: cover; border-radius: 14px;"
+                    alt="${item.imageAlt}"
+                    title="${item.imageTitle}"
+                    aria-label="${item.imageAriaLabel}">
+                </div>
+
+                <div class="col-12 col-sm-8 d-flex flex-column justify-content-center">
+                  <h3 class="text-start mb-2">${item.name}</h3>
+                  <p class="text-muted text-start mb-0">${item.area}｜${item.type}</p>
+                </div>
+              </div>
+              <!-- 第二排：標籤 -->
+              <div class="mb-3 d-flex flex-wrap gap-2 justify-content-start">
+                <span class="badge bg-${item.badgeColor1}">${item.badge1}</span>
+                <span class="badge bg-${item.badgeColor2}">${item.badge2}</span>
+                <span class="badge bg-${item.badgeColor3}">${item.badge3}</span>
+                <span class="badge bg-${item.badgeColor4}">${item.badge4}</span>
+              </div>
+
+              <!-- 第三排：說明 -->
+              <p class="text-start mb-4">${item.description}</p>
+
+              <!-- 右下角按鈕 -->
+              <div class="mt-auto d-flex justify-content-end gap-2">
+                <a href="${item.map}" class="btn btn-outline-brown btn-sm" target="_blank">地圖</a>
+                <a href="${item.review}" class="btn btn-brown btn-sm">食記</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  document.getElementById("restaurantList").innerHTML = html;
+  document.getElementById("resultCount").textContent =
+    "共找到 " + data.length + " 間餐廳";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+/* 統一整體設定 */
+/* 利用根元素作為標籤選取器，改變整體頁面的文字大小。網頁字體大小從預設16px改為18px */
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+/* 調整網頁的字體。下方原始碼意思為優先使用"微軟正黑體"，若讀者的電腦沒有此字體(例:MAC沒有微軟正黑體)，那就會換成Google雲端字體做使用 */
+body {
+  font-family: "微軟正黑體", "Chiron Hei HK", sans-serif;
+  background-color: rgb(250, 248, 245);
+  color: rgb(58, 52, 46);
+  line-height: 1.8;
+  padding-top: 70px; /* 固定導覽列預留空間 */
+}
+
+/* 連結Google雲端字體，提供用戶一致體驗UX */
+@import url('https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:wght@400;500;700;800&display=swap');
+
+
+/* 個別指定網頁背景色 */
+/* .bg-color-red {background: #ff0000;} */
+
+/* 網站主題為深色系，導覽列顏色自訂 */
+:root,
+[data-bs-theme=dark] {
+  --bs-dark-rgb: 64, 58, 52;
+}
+
+/* 基本標題層級 */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: rgb(49, 43, 38);
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: rgb(74, 82, 96);
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: rgb(50, 43, 37);
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: rgb(147, 88, 45);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: rgb(98, 92, 86);
+}
+
+
+/* 駝峰式命名，與其它CSS衝突，material-icons的預設font-size是24px，CSS套用的會是GoogleIcons贏 */
+/* 與其它CSS衝突，無法套用文字大小時，可強制優先套用目前樣式 
+iconsTitle {
+    font-size: 2rem !important;
+    color:rgb(39,102,229);
+    vertical-align: text-bottom
+}*/
+
+/* 導覽列 */
+.navbar {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* 導覽列最左邊的"一席食地"變粗體字 */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+}
+
+/* 搜尋按鈕 */
+.btn-search {
+  background-color: rgb(161, 94, 42);
+  color: #fff;
+  border: 1px solid rgb(161, 94, 42);
+}
+
+.btn-search:hover {
+  background-color: rgb(130, 72, 29);
+  border-color: rgb(130, 72, 29);
+  color: #fff;
+}
+
+/* 輪播圖 */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* 首頁主標語 */
+.intro-section {
+  padding: 4.5rem 0 4rem;
+}
+
+.intro-text {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .intro-text {
+    max-width: 92%;
+    line-height: 1.9;
+  }
+}
+
+/* 首頁按鈕群 */
+.intro-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+/* 區塊共用 */
+.section-block {
+  padding: 4rem 0;
+}
+
+.section-tight {
+  padding-top: 0;
+}
+
+.section-heading {
+  margin-bottom: 2.5rem;
+}
+
+.section-heading p {
+  max-width: 680px;
+  margin: 0.5rem auto 0;
+}
+
+/* 按鈕 */
+.btn-brown,
+.btn-outline-brown {
+  border-radius: 999px;
+  padding: 0.65rem 1.35rem;
+  transition: all 0.25s ease;
+}
+
+.btn-brown {
+  background-color: #8b5e3c;
+  color: white;
+  border: 1px solid #8b5e3c;
+}
+
+.btn-brown:hover {
+  background-color: #6e472c;
+  border-color: #6e472c;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-outline-brown {
+  background-color: transparent;
+  color: #8b5e3c;
+  border: 1px solid #8b5e3c;
+}
+
+.btn-outline-brown:hover {
+  background-color: #8b5e3c;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* 三大分類卡片 + 本週精選卡片共用 */
+.category-card,
+.featured-card {
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover,
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 36px rgba(0, 0, 0, 0.1);
+}
+
+/* 三大分類卡片 */
+.category-card {
+  height: 100%;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.category-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 2rem auto 1rem;
+  display: block;
+}
+
+.category-card-body {
+  padding: 1rem 1.5rem 2rem;
+}
+
+.category-card-body p {
+  min-height: 58px;
+}
+
+/* 品牌過場 */
+.brand-banner {
+  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(245, 238, 229) 100%);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.brand-banner p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+}
+
+/* 本週精選卡片 */
+.featured-card {
+  border-radius: 1.25rem;
+}
+
+.featured-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.featured-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.featured-card-body p {
+  min-height: 86px;
+}
+
+/* 左右分欄區塊 */
+.split-panel {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.split-image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* 一席指南用列表 */
+.guide-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0 2rem;
+}
+
+.guide-list li {
+  margin-bottom: 0.75rem;
+  color: rgb(80, 74, 69);
+}
+
+/* 頁尾 */
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem 0 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+
+/*圖片裁切功能
+.imgCut {
+  width: 100%;
+  height: 500px;
+  clip: rect(0px, 0px, 100px, 0px);
+  object-fit: cover;}*/
+
+/*項目清單符號  
+.list-symbol {list-style-type: circle;} */
+
+/* 清單項目色彩，連帶影響清單內的文字色彩 */
+/* li{color:green;} */
+
+/* 針對項目/編號清單的符號色彩，優化前 
+ul li ::marker {
+    color:green;
+} 
+    
+ol li ::marker {
+    color:green;
+*/
+
+ /* 針對項目/編號清單的符號色彩，優化方式一 
+ul li ::marker, ol li:: marker {
+    color:green;
+}*/
+
+/* 針對項目/編號清單的符號色彩，優化方式二 */
+li::marker {
+  color: green;
+}
+
+
+
+/* =========================
+   about.html 專用
+   不影響首頁
+   ========================= */
+
+/* 第一層主敘事 */
+.about-hero-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-hero-visual {
+  overflow: hidden;
+}
+
+.about-hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 90%;
+  display: block;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.about-hero-content {
+  padding: 2rem 2.2rem 2.2rem;
+}
+
+.about-hero-block h2 {
+  margin-bottom: 1rem;
+}
+
+.about-hero-block p:last-child {
+  margin-bottom: 0;
+}
+
+.about-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.10);
+  margin: 1.8rem 0;
+}
+
+/* 第二、三層 */
+.about-side-panel {
+  padding: 2.2rem;
+}
+
+.about-side-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.about-side-content h2 {
+  margin-bottom: 1rem;
+}
+
+.about-side-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* RWD */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 17px;
+  }
+
+  .split-panel {
+    padding: 2rem;
+  }
+
+  .section-block {
+    padding: 3.5rem 0;
+  }
+
+  .about-hero-image {
+    height: 280px;
+  }
+
+  .about-side-image {
+    height: 280px;
+  }
+
+  .about-side-panel {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  html {
+    font-size: 16px;
+  }
+
+/* 讓固定導覽列時的banner大圖片不被吃掉一小部份 */
+  body {
+    padding-top: 66px;
+  }
+
+  .intro-section {
+    padding: 3.2rem 0 3rem;
+  }
+
+  .section-block {
+    padding: 3rem 0;
+  }
+
+  .category-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .category-card-body p,
+  .featured-card-body p {
+    min-height: auto;
+  }
+
+  .split-panel {
+    padding: 1.5rem;
+  }
+
+  .about-hero-image {
+    height: 220px;
+    object-position: center 50%;
+  }
+
+  .about-hero-content {
+    padding: 1.5rem 1.4rem 1.6rem;
+  }
+
+  .about-divider {
+    margin: 1.4rem 0;
+  }
+
+  .about-side-panel {
+    padding: 1.5rem;
+  }
+
+  .about-side-image {
+    height: 220px;
+  }
+}
+
+
+/* ===== 食記評分區塊 ===== */
+.review-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.review-meta-item {
+  background: #f5f2ee;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-label {
+  color: #6b5c4f;
+}
+
+.meta-stars {
+  color: #d6a84f;
+  letter-spacing: 2px;
+}
+
+/* 手機顯示優化 */
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .mobile-break {
+    display: block;
+  }
+}
+
+.review-filter-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.review-filter-top,
+.review-filter-bottom {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .review-filter-wrap {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
